@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Støtt russegruppen vår</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1f3c6d;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+    .card {
+      background: white;
+      color: black;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 300px;
+    }
+    button {
+      background: #0084FF;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #006fd6;
+    }
+    .kontakt {
+      margin-top: 30px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Støtt russegruppen vår 🎉</h1>
+  <p>Kjøp honning 🍯 eller supersvamper 🧽</p>
+
+  <div class="card">
+    <h2>Honning (1 kg)</h2>
+    <p>350 kr</p>
+    <button onclick="bestill('Honning')">Bestill via Messenger</button>
+  </div>
+
+  <div class="card">
+    <h2>Supersvamper (50 pk)</h2>
+    <p>350 kr</p>
+    <button onclick="bestill('Supersvamper')">Bestill via Messenger</button>
+  </div>
+
+  <div class="kontakt">
+    📱 Eller send SMS til: <b>41488014</b>
+  </div>
+
+  <script>
+    function bestill(produkt) {
+      const melding = `Hei! Jeg vil bestille ${produkt} 😊`;
+
+      // 🔧 SETT INN DIN FACEBOOK BRUKERNAVN HER
+      const brukernavn = "Edward melhus";
+
+      const url = `https://m.me/${brukernavn}?ref=${encodeURIComponent(melding)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
